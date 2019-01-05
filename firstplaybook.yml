@@ -1,0 +1,8 @@
+---
+- name: This playbook will be for HTTP Purpose
+  hosts: server
+  tasks:
+   - name: This module will install httpd
+     yum:
+      name: httpd
+      state: installed
