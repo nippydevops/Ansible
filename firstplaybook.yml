@@ -6,12 +6,19 @@
      yum:
       name: httpd
       state: installed
+     tags:
+      - installation
    - name: This module will start http service
      service:
       name: httpd
       state: started
       enabled: yes
+     tags:
+      - service
    - name: This module will copy the index file to server
      copy:
       src: /opt/myplaybooks/index.html
       dest: /var/www/html
+     tags:
+      - copy
+    
