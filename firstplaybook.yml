@@ -6,3 +6,8 @@
      yum:
       name: httpd
       state: installed
+   - name: This module will start http service
+     service:
+      name: httpd
+      state: started
+      enabled: yes
